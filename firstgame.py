@@ -33,8 +33,8 @@ toss.chance(user_chance)
 if toss.winner=="User":
     while True:
         try:
-            user_choice = input("Do you want to Batting or Balling: ")
-            if user_choice ==  "Bowling" or "Bowl" or "bowling" or "bowl" or "BOWL" or "BOWLING":
+            user_choice = input("Do you want to Batting or Bowling: ")
+            if user_choice.lower() in ["batting", "bat", "bowling", "bowl"]:
                 break
             else:
                 print("Please enter a valid input.")
