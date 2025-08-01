@@ -44,8 +44,7 @@ class Game:
         self.game_on=True
 
     def secondinningsmove(self,user_ball):
-        # self.comp_ball = choice(self.avail_score)
-        self.comp_ball = 2
+        self.comp_ball = choice(self.avail_score)
         print(f"Computer's move {self.comp_ball}")
         if user_ball != self.comp_ball:
             if self.user_choice == "Batting":
