@@ -20,13 +20,13 @@ class Toss:
         self.comp_chance=choice(self.avail_score)
         print(f"Computer chose {self.comp_chance}")
         if (self.comp_chance+user_chance)%2==0:
-            if self.user_toss=="Even":
+            if self.user_toss.lower() in ["even", "e"]:
                 self.winner="User"
             else:
                 self.winner="Computer"
 
         else:
-            if self.user_toss=="Odd":
+            if self.user_toss.lower() in ["odd", "o"]:
                 self.winner="User"
             else:
                 self.winner="Computer"
@@ -37,7 +37,7 @@ class Toss:
     def select(self,user_choice):
         self.user_choice=user_choice
         if self.winner=="User":
-            if user_choice=="Batting" or "Bat" or "bat" or "batting" or "BAT" or "BATTING":
+            if user_choice.lower() in ["batting", "bat"]:
                 self.comp_choice="Bowling"
                 print(f"Hence, Computer will do {self.comp_choice}")
             else:
